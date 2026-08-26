@@ -1,0 +1,107 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" },
+        { "key": "Vary", "value": "Accept" },
+        { "key": "Link", "value": "</.well-known/ai-catalog.json>; rel=\"ai-catalog\", </.well-known/api-catalog>; rel=\"api-catalog\", </sitemap.xml>; rel=\"service-doc\", </.well-known/oauth-protected-resource>; rel=\"oauth-protected-resource\", </.well-known/oauth-authorization-server>; rel=\"oauth-authorization-server\", </.well-known/agent-skills/index.json>; rel=\"agent-skills\", </.well-known/mcp/server-card.json>; rel=\"mcp-server-card\", </.well-known/dns-aid>; rel=\"dns-aid\", </auth.md>; rel=\"authorizing-agent\", </auth.md>; rel=\"agent-auth\", </auth.md>; rel=\"skill\"" }
+      ]
+    },
+    {
+      "source": "/images/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/(.*)\\.css",
+      "headers": [
+        { "key": "Content-Type", "value": "text/css; charset=utf-8" },
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    },
+    {
+      "source": "/(.*)\\.js",
+      "headers": [
+        { "key": "Content-Type", "value": "application/javascript; charset=utf-8" },
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    },
+    {
+      "source": "/llms.txt",
+      "headers": [
+        { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    },
+    {
+      "source": "/robots.txt",
+      "headers": [
+        { "key": "Content-Type", "value": "text/plain; charset=utf-8" }
+      ]
+    },
+    {
+      "source": "/auth.md",
+      "headers": [
+        { "key": "Content-Type", "value": "text/markdown; charset=utf-8" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    },
+    {
+      "source": "/dns-aid.md",
+      "headers": [
+        { "key": "Content-Type", "value": "text/markdown; charset=utf-8" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    },
+    {
+      "source": "/(.*)\\.md",
+      "headers": [
+        { "key": "Content-Type", "value": "text/markdown; charset=utf-8" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    },
+    {
+      "source": "/.well-known/(.*)",
+      "headers": [
+        { "key": "Content-Type", "value": "application/json; charset=utf-8" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    }
+  ],
+  "rewrites": [
+    { "source": "/auth.md", "destination": "/auth.md" },
+    { "source": "/dns-aid.md", "destination": "/dns-aid.md" },
+    { "source": "/.well-known/ai-catalog.json", "destination": "/.well-known/ai-catalog.json" },
+    { "source": "/.well-known/ai-catalog", "destination": "/.well-known/ai-catalog.json" },
+    { "source": "/.well-known/oauth-authorization-server", "destination": "/.well-known/oauth-authorization-server.json" },
+    { "source": "/.well-known/oauth-protected-resource", "destination": "/.well-known/oauth-protected-resource.json" },
+    { "source": "/.well-known/dns-aid", "destination": "/.well-known/dns-aid.json" },
+    { "source": "/.well-known/agent-auth", "destination": "/.well-known/agent-auth.json" },
+    { "source": "/.well-known/openid-configuration", "destination": "/.well-known/openid-configuration.json" },
+    { "source": "/.well-known/api-catalog", "destination": "/.well-known/api-catalog.json" },
+    { "source": "/courses/plasterer", "destination": "/courses/plasterer.html" },
+    { "source": "/courses/tiler", "destination": "/courses/tiler.html" },
+    { "source": "/courses/formwork-carpentry", "destination": "/courses/formwork-carpentry.html" },
+    { "source": "/courses/bar-bending", "destination": "/courses/bar-bending.html" },
+    { "source": "/courses/bricklayer", "destination": "/courses/bricklayer.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/courses", "destination": "/courses.html" },
+    { "source": "/gallery", "destination": "/gallery.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/enroll-now", "destination": "/enroll-now.html" },
+    { "source": "/privacy-policy", "destination": "/privacy-policy.html" },
+    { "source": "/terms-of-services", "destination": "/terms-of-services.html" }
+  ]
+}

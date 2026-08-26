@@ -1,0 +1,26 @@
+{
+  "$schema": "https://agentskills.io/schemas/v0.2.0/index.json",
+  "skills": [
+    {
+      "name": "attc-courses-inquiry",
+      "type": "action",
+      "description": "Discover vocational training programs, trade testing, and ISO certified courses offered by ATTC.",
+      "url": "https://www.attc.school/courses.html",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "enrollment-request",
+      "type": "form",
+      "description": "Submit an enrollment application for vocational training courses at ATTC.",
+      "url": "https://www.attc.school/enroll-now.html",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "contact-support",
+      "type": "contact",
+      "description": "Retrieve contact info, admission helpline, and campus location for ATTC.",
+      "url": "https://www.attc.school/contact.html",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://dns-aid.org/schemas/v1/dns-aid.json",
+  "domain": "www.attc.school",
+  "records": [
+    {
+      "name": "_index._agents",
+      "type": "HTTPS",
+      "priority": 1,
+      "target": "www.attc.school.",
+      "params": {
+        "alpn": ["h3", "h2"],
+        "port": 443,
+        "key65300": "path=/.well-known/agent-skills/index.json"
+      }
+    },
+    {
+      "name": "_a2a._agents",
+      "type": "HTTPS",
+      "priority": 1,
+      "target": "www.attc.school.",
+      "params": {
+        "alpn": ["a2a"],
+        "port": 443,
+        "key65300": "path=/.well-known/mcp/server-card.json"
+      }
+    },
+    {
+      "name": "_mcp._agents",
+      "type": "HTTPS",
+      "priority": 1,
+      "target": "www.attc.school.",
+      "params": {
+        "alpn": ["mcp"],
+        "port": 443,
+        "key65300": "path=/.well-known/mcp/server-card.json"
+      }
+    }
+  ]
+}

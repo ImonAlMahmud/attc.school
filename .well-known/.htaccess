@@ -1,0 +1,26 @@
+# .well-known/.htaccess
+# MIME types & CORS for discovery files without extensions
+
+<IfModule mod_headers.c>
+  Header always set Access-Control-Allow-Origin "*"
+  Header always set Access-Control-Allow-Methods "GET, OPTIONS"
+  Header always set Content-Type "application/json; charset=UTF-8"
+</IfModule>
+
+<IfModule mod_mime.c>
+  AddType application/json .json
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^dns-aid$ dns-aid.json [L]
+</IfModule>
+
+<FilesMatch "^(ai-catalog|api-catalog|openid-configuration|oauth-authorization-server|oauth-protected-resource|http-message-signatures-directory|dns-aid|agent-auth)(\.json)?$">
+  <IfModule mod_headers.c>
+    Header always set Content-Type "application/json; charset=UTF-8"
+  </IfModule>
+  ForceType application/json
+</FilesMatch>
+
+Require all granted

@@ -1,0 +1,43 @@
+{
+  "issuer": "https://www.attc.school",
+  "authorization_endpoint": "https://www.attc.school/.well-known/oauth-authorization-server",
+  "token_endpoint": "https://www.attc.school/.well-known/oauth-authorization-server",
+  "jwks_uri": "https://www.attc.school/.well-known/http-message-signatures-directory",
+  "response_types_supported": [
+    "token"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "grant_types_supported": [
+    "client_credentials"
+  ],
+  "scopes_supported": [
+    "read",
+    "public"
+  ],
+  "claims_supported": [],
+  "userinfo_endpoint": "https://www.attc.school/.well-known/openid-configuration",
+  "registration_endpoint": "https://www.attc.school/auth.md",
+  "agent_auth": {
+    "skill": "https://www.attc.school/auth.md",
+    "register_uri": "https://www.attc.school/auth.md",
+    "registration_endpoint": "https://www.attc.school/auth.md",
+    "claim_uri": "https://www.attc.school/auth.md",
+    "identity_endpoint": "https://www.attc.school/auth.md",
+    "claim_endpoint": "https://www.attc.school/auth.md",
+    "identity_types_supported": [
+      "anonymous",
+      "agent",
+      "user",
+      "identity_assertion"
+    ],
+    "credential_types_supported": [
+      "none",
+      "bearer"
+    ]
+  }
+}

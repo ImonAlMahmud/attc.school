@@ -1,0 +1,69 @@
+{
+  "$schema": "https://agenticresourcediscovery.org/schemas/v1.0/ai-catalog.schema.json",
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Advance Training & Testing Center (ATTC)",
+    "identifier": "https://www.attc.school"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:attc.school:mcp:server-card",
+      "displayName": "ATTC MCP Server Card",
+      "type": "application/json",
+      "url": "https://www.attc.school/.well-known/mcp/server-card.json",
+      "description": "Model Context Protocol (MCP) server providing access to ATTC vocational training programs, courses, and admissions tools.",
+      "representativeQueries": [
+        "What vocational courses and testing does ATTC provide?",
+        "Connect to ATTC MCP server endpoint for tools",
+        "Enroll in a vocational course or inquire via MCP tools"
+      ]
+    },
+    {
+      "identifier": "urn:air:attc.school:skills:index",
+      "displayName": "ATTC Agent Skills Index",
+      "type": "application/json",
+      "url": "https://www.attc.school/.well-known/agent-skills/index.json",
+      "description": "Agent skills index offering capability descriptors for vocational course inquiries, enrollment applications, and contact support.",
+      "representativeQueries": [
+        "Find agent skills for contacting ATTC admissions",
+        "How to submit an enrollment application to ATTC",
+        "Inquire about Plasterer, Tiler, Bar Bending, Formwork Carpentry, and Bricklayer courses"
+      ]
+    },
+    {
+      "identifier": "urn:air:attc.school:docs:llms",
+      "displayName": "ATTC Structured LLM Knowledge Base",
+      "type": "text/plain",
+      "url": "https://www.attc.school/llms.txt",
+      "description": "Structured AI summary and course directory for LLM search engines and reasoning agents.",
+      "representativeQueries": [
+        "Overview of Advance Training & Testing Center courses, syllabus, and hostel facilities",
+        "ISO certified vocational trade testing and certifications in Dhaka",
+        "Admission eligibility and contact info for ATTC Dhaka"
+      ]
+    },
+    {
+      "identifier": "urn:air:attc.school:auth:authorizing-agent",
+      "displayName": "ATTC Agent Authorization Guide",
+      "type": "text/markdown",
+      "url": "https://www.attc.school/auth.md",
+      "description": "Instructions and guidelines for AI agents authorizing and authenticating with ATTC services per RFC 8414 and RFC 8707.",
+      "representativeQueries": [
+        "How do AI agents authenticate with ATTC?",
+        "Read agent authorization policies for ATTC",
+        "What credentials or headers are needed for ATTC agent requests?"
+      ]
+    },
+    {
+      "identifier": "urn:air:attc.school:api:catalog",
+      "displayName": "ATTC RFC 9264 API Catalog",
+      "type": "application/linkset+json",
+      "url": "https://www.attc.school/.well-known/api-catalog.json",
+      "description": "RFC 9264 linkset catalog for ATTC public endpoints and API documentation.",
+      "representativeQueries": [
+        "Discover ATTC API documentation and endpoints",
+        "Access linkset catalog for vocational training services"
+      ]
+    }
+  ]
+}

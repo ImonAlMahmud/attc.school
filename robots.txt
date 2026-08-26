@@ -1,0 +1,45 @@
+# ATTC — Advance Training & Testing Center
+# robots.txt — Search Engine & AI Bot Crawl Instructions
+
+User-agent: *
+Allow: /
+Disallow: /images/521537f2fc29a236be66f0d50a837bbf.webp
+Disallow: /images/df3d70a426a584ee512535b3ef86dce6.webp
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+User-agent: GPTBot
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+User-agent: ChatGPT-User
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+User-agent: ClaudeBot
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+User-agent: PerplexityBot
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+User-agent: Google-Extended
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+User-agent: AgentSkillsBot
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+User-agent: Omgilibot
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+# Structured LLM Information for AI Answer Engines
+# llms.txt: https://www.attc.school/llms.txt
+
+# ARD Agentic Resource Discovery Manifest
+Agentmap: https://www.attc.school/.well-known/ai-catalog.json
+
+# Sitemap
+Sitemap: https://www.attc.school/sitemap.xml

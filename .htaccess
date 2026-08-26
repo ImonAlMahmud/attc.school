@@ -1,0 +1,101 @@
+# ==============================================================================
+# .htaccess — attc.school
+# Static site with markdown content negotiation for agent/LLM consumers
+# ==============================================================================
+
+# Disable MultiViews to prevent interference with clean/markdown URL rewrites
+Options -MultiViews
+
+# ------------------------------------------------------------------------------
+# Rewrite Engine — Markdown Content Negotiation
+# ------------------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Markdown Content Negotiation (Accept: text/markdown)
+  # Rewrites requested page to corresponding static .md file
+  RewriteCond %{HTTP_ACCEPT} text/markdown [NC]
+  RewriteCond %{REQUEST_URI} !^\/\.well-known\/ [NC]
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}\.md -f
+  RewriteRule ^(.*)$ $1.md [L]
+
+  # Route root or index.html requests to index.md when markdown is accepted
+  RewriteCond %{HTTP_ACCEPT} text/markdown [NC]
+  RewriteCond %{REQUEST_URI} ^/($|index\.html) [NC]
+  RewriteRule ^(.*)$ index.md [L]
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# MIME Types for Static Files
+# ------------------------------------------------------------------------------
+<IfModule mod_mime.c>
+  AddType text/markdown .md
+  AddType application/json .json
+  AddType image/webp .webp
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# Headers: Link discovery, CORS, Content-Type overrides
+# ------------------------------------------------------------------------------
+<IfModule mod_headers.c>
+
+  # RFC 8288 Link header — advertise agent/API discovery endpoints.
+  <FilesMatch "\.(html|md)$">
+    Header always set Link "</.well-known/ai-catalog.json>; rel=\"ai-catalog\", </.well-known/api-catalog>; rel=\"api-catalog\", </sitemap.xml>; rel=\"service-doc\", </.well-known/oauth-protected-resource>; rel=\"oauth-protected-resource\", </.well-known/oauth-authorization-server>; rel=\"oauth-authorization-server\", </.well-known/agent-skills/index.json>; rel=\"agent-skills\", </.well-known/mcp/server-card.json>; rel=\"mcp-server-card\", </.well-known/dns-aid>; rel=\"dns-aid\", </auth.md>; rel=\"authorizing-agent\", </auth.md>; rel=\"agent-auth\", </auth.md>; rel=\"skill\""
+  </FilesMatch>
+
+  # CORS — machine-readable content types
+  <FilesMatch "\.(md|json)$">
+    Header always set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+
+  # Global security headers
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Vary "Accept"
+
+  # Specific Content-Type overrides for Markdown and extensionless API metadata files
+  <FilesMatch "\.md$">
+    Header always set Content-Type "text/markdown; charset=UTF-8"
+  </FilesMatch>
+  <FilesMatch "^(ai-catalog|api-catalog|openid-configuration|oauth-authorization-server|oauth-protected-resource|http-message-signatures-directory|dns-aid|agent-auth)(\.json)?$">
+    Header always set Content-Type "application/json; charset=UTF-8"
+  </FilesMatch>
+
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# Caching — static site content
+# ------------------------------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/markdown       "access plus 1 day"
+  ExpiresByType application/json    "access plus 1 hour"
+  ExpiresByType text/html           "access plus 1 day"
+  ExpiresByType text/css            "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
+  ExpiresByType image/jpeg          "access plus 1 month"
+  ExpiresByType image/png           "access plus 1 month"
+  ExpiresByType image/webp          "access plus 1 month"
+  ExpiresByType image/gif           "access plus 1 month"
+  ExpiresByType image/svg+xml       "access plus 1 month"
+  ExpiresByType image/x-icon        "access plus 1 month"
+  ExpiresByType font/woff           "access plus 1 month"
+  ExpiresByType font/woff2          "access plus 1 month"
+  ExpiresByType font/ttf            "access plus 1 month"
+  ExpiresByType font/otf            "access plus 1 month"
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# Protect .ht* files
+# ------------------------------------------------------------------------------
+<FilesMatch "^\.ht">
+  Require all denied
+</FilesMatch>
+
+# ------------------------------------------------------------------------------
+# Compression
+# ------------------------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/markdown application/json text/html text/css application/javascript
+</IfModule>

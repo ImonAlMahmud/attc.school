@@ -1,0 +1,18 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schemas/server-card.json",
+  "serverInfo": {
+    "name": "ATTC Agent Service",
+    "version": "1.0.0",
+    "description": "Model Context Protocol (MCP) server providing access to Advance Training & Testing Center courses, enrollment, and verification tools."
+  },
+  "transport": {
+    "type": "sse",
+    "endpoint": "https://www.attc.school/mcp/sse"
+  },
+  "capabilities": {
+    "tools": true,
+    "prompts": true,
+    "resources": true,
+    "logging": {}
+  }
+}

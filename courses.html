@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Courses — Plasterer, Tiler, Bar Bending, Formwork, Bricklayer | ATTC</title>
+  <meta name="description" content="Explore ATTC 5 professional vocational trade courses: Plasterer, Tiler, Formwork Carpentry, Bar Bending, and Bricklayer. Hands-on, certified training in Dhaka, Bangladesh.">
+  <link rel="canonical" href="https://www.attc.school/courses.html">
+  <meta property="og:title" content="Vocational Courses — ATTC Dhaka">
+  <meta property="og:description" content="Explore ISO-certified courses in Plastering, Tiling, Bar Bending, Formwork Carpentry & Bricklaying. Practical skills for global careers.">
+  <meta property="og:image" content="https://www.attc.school/images/outer_front_view.webp">
+  <meta property="og:url" content="https://www.attc.school/courses.html">
+  <link rel="icon" type="image/webp" href="favicon.webp">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .filter-bar { display:flex; align-items:center; justify-content:center; gap:var(--space-3); flex-wrap:wrap; margin-bottom:var(--space-10); }
+    .filter-btn { padding:.48em 1.3em; border-radius:var(--radius-full); font-size:var(--text-sm); font-weight:600; border:1.5px solid #CBD5E1; color:#475569; background:#FFFFFF; cursor:pointer; transition:all .25s ease; }
+    .filter-btn:hover { border-color:#1877F2; color:#1877F2; background:#EBF3FF; }
+    .filter-btn.active { background:#1877F2; border-color:#1877F2; color:#FFFFFF; box-shadow:0 4px 14px rgba(24,119,242,.3); }
+    .courses-grid-page { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:var(--space-6); }
+    .course-card-page { background:#FFFFFF; border:1px solid rgba(15,23,42,.08); border-radius:16px; overflow:hidden; transition:all .3s ease; box-shadow:0 4px 16px rgba(15,23,42,.04); display:flex; flex-direction:column; }
+    .course-card-page:hover { transform:translateY(-6px); box-shadow:0 20px 40px rgba(24,119,242,.12); border-color:rgba(24,119,242,.25); }
+    .course-card-page__image { position:relative; aspect-ratio:16/10; overflow:hidden; }
+    .course-card-page__image img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .5s ease; }
+    .course-card-page:hover .course-card-page__image img { transform:scale(1.06); }
+    .course-card-page__badge { position:absolute; top:12px; left:12px; padding:4px 12px; border-radius:var(--radius-full); font-size:.7rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase; background:rgba(255,255,255,.9); color:#1877F2; border:1px solid rgba(24,119,242,.25); backdrop-filter:blur(8px); }
+    .course-card-page__body { padding:20px 22px 0; flex:1; }
+    .course-card-page__title { font-size:var(--text-lg); font-weight:800; color:#0F172A; margin-bottom:var(--space-2); line-height:1.3; }
+    .course-card-page__desc { font-size:var(--text-xs); color:#475569; line-height:1.7; }
+    .course-card-page__tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+    .course-tag { display:inline-flex; align-items:center; gap:5px; font-size:.7rem; font-weight:600; color:#475569; background:#F1F5F9; padding:4px 10px; border-radius:6px; }
+    .course-tag svg { width:12px; height:12px; stroke:#1877F2; }
+    .course-card-page__footer { padding:16px 22px 22px; margin-top:16px; }
+    .course-card-page__footer a { display:block; width:100%; text-align:center; padding:.65em 1em; border-radius:10px; font-size:var(--text-sm); font-weight:700; background:linear-gradient(135deg,#1877F2,#0D47A1); color:#FFFFFF; text-decoration:none; transition:all .25s ease; box-shadow:0 4px 12px rgba(24,119,242,.25); }
+    .course-card-page__footer a:hover { box-shadow:0 8px 24px rgba(24,119,242,.4); transform:translateY(-1px); }
+    .courses-cta-section { background:linear-gradient(135deg,#0D47A1 0%,#1565C0 50%,#1877F2 100%); padding-block:64px; text-align:center; }
+    .courses-cta-section h2 { font-size:var(--text-3xl); font-weight:800; color:#FFFFFF; margin-bottom:var(--space-4); }
+    .courses-cta-section h2 em { font-style:normal; color:rgba(255,255,255,.82); }
+    .courses-cta-section p { font-size:var(--text-sm); color:rgba(255,255,255,.80); max-width:560px; margin-inline:auto; line-height:1.75; margin-bottom:var(--space-8); }
+    .btn-cta-white { display:inline-flex; align-items:center; gap:8px; padding:.85em 2em; border-radius:50px; font-size:var(--text-sm); font-weight:700; background:#FFFFFF; color:#1877F2; text-decoration:none; transition:all .25s ease; box-shadow:0 8px 24px rgba(0,0,0,.15); }
+    .btn-cta-white:hover { background:#F0F7FF; transform:translateY(-2px); box-shadow:0 12px 32px rgba(0,0,0,.2); }
+    .btn-cta-glass { display:inline-flex; align-items:center; gap:8px; padding:.85em 2em; border-radius:50px; font-size:var(--text-sm); font-weight:700; background:rgba(255,255,255,.15); color:#FFFFFF; border:1.5px solid rgba(255,255,255,.45); text-decoration:none; transition:all .25s ease; backdrop-filter:blur(10px); }
+    .btn-cta-glass:hover { background:rgba(255,255,255,.25); border-color:rgba(255,255,255,.7); transform:translateY(-2px); }
+  </style>
+  <!-- AI Agent Discovery Links (RFC 8288 / IsItAgentReady Level 5) -->
+  <link rel="ai-catalog" href="/.well-known/ai-catalog.json">
+  <link rel="api-catalog" href="/.well-known/api-catalog">
+  <link rel="service-doc" href="/sitemap.xml">
+  <link rel="oauth-protected-resource" href="/.well-known/oauth-protected-resource">
+  <link rel="oauth-authorization-server" href="/.well-known/oauth-authorization-server">
+  <link rel="agent-skills" href="/.well-known/agent-skills/index.json">
+  <link rel="mcp-server-card" href="/.well-known/mcp/server-card.json">
+  <link rel="dns-aid" href="/.well-known/dns-aid">
+  <link rel="authorizing-agent" href="/auth.md">
+  <link rel="agent-auth" href="/auth.md">
+  <link rel="skill" href="/auth.md">
+</head>
+<body>
+
+<main>
+  <!-- Page Hero -->
+  <section class="page-hero" aria-label="Courses Page Header">
+    <div class="hero-bg-image-layer">
+      <img src="images/big_training_area.webp" alt="ATTC Training Area" loading="eager">
+      <div class="hero-bg-overlay" style="background:linear-gradient(to bottom,rgba(255,255,255,.85) 0%,rgba(255,255,255,.90) 100%);"></div>
+    </div>
+    <div class="container">
+      <div class="page-hero-content">
+        <nav class="page-hero-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-chevron-right" style="font-size:10px;"></i>
+          <span>Courses</span>
+        </nav>
+        <h1>Your Path to <em>Career Excellence</em></h1>
+        <p>Specialized vocational programs designed for hands-on technical mastery and global employment.</p>
+        <div class="hero-actions">
+          <a href="enroll-now.html" class="btn btn-accent">Enroll Now &rarr;</a>
+          <a href="contact.html" class="btn btn-outline-dark">Ask a Question</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses Grid -->
+  <section class="section" style="background:#F8FAFC;" aria-labelledby="courses-heading">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:var(--space-8);">
+        <div class="section-label" style="justify-content:center;margin-inline:auto;width:fit-content;display:inline-flex;">
+          <span class="pulse-dot"></span> Vocational Trades
+        </div>
+        <h2 class="section-title reveal" id="courses-heading" style="margin-top:var(--space-4);">All <span>Available Courses</span></h2>
+        <p class="section-subtitle" style="margin-inline:auto;margin-top:var(--space-2);font-size:var(--text-sm);">Certified trade courses tailored for high-demand construction industries.</p>
+      </div>
+
+      <div class="filter-bar" role="group" aria-label="Filter courses by category">
+        <button class="filter-btn active" data-filter="all">All Courses</button>
+        <button class="filter-btn" data-filter="construction">Construction</button>
+        <button class="filter-btn" data-filter="carpentry">Carpentry</button>
+        <button class="filter-btn" data-filter="structural">Structural</button>
+        <button class="filter-btn" data-filter="masonry">Masonry</button>
+      </div>
+
+      <div class="courses-grid-page">
+
+        <!-- Plasterer -->
+        <article class="course-card-page reveal" data-category="construction">
+          <div class="course-card-page__image">
+            <img src="images/course_plasterer.webp" alt="Plasterer professional course at ATTC" loading="lazy">
+            <span class="course-card-page__badge">Construction</span>
+          </div>
+          <div class="course-card-page__body">
+            <h2 class="course-card-page__title">Plasterer</h2>
+            <p class="course-card-page__desc">Master the art of creating smooth, durable, and aesthetically pleasing surfaces on walls, ceilings, and structures. Learn cement, gypsum, and lime plastering techniques with real-world applications.</p>
+            <div class="course-card-page__tags">
+              <span class="course-tag"><i class="fa-solid fa-clock"></i>Practical Training</span>
+              <span class="course-tag"><i class="fa-solid fa-shield-halved"></i>ATTC Certified</span>
+            </div>
+          </div>
+          <div class="course-card-page__footer"><a href="courses/plasterer.html">View Full Details &rarr;</a></div>
+        </article>
+
+        <!-- Tiler -->
+        <article class="course-card-page reveal reveal-delay-1" data-category="construction">
+          <div class="course-card-page__image">
+            <img src="images/course_tiler.webp" alt="Tiler professional course at ATTC" loading="lazy">
+            <span class="course-card-page__badge">Construction</span>
+          </div>
+          <div class="course-card-page__body">
+            <h2 class="course-card-page__title">Tiler</h2>
+            <p class="course-card-page__desc">Become a professional tiler specializing in floor, wall, and specialty surface installations. Learn ceramic, porcelain, mosaic, marble, and granite tile installation with advanced finishing techniques.</p>
+            <div class="course-card-page__tags">
+              <span class="course-tag"><i class="fa-solid fa-clock"></i>Practical Training</span>
+              <span class="course-tag"><i class="fa-solid fa-shield-halved"></i>ATTC Certified</span>
+            </div>
+          </div>
+          <div class="course-card-page__footer"><a href="courses/tiler.html">View Full Details &rarr;</a></div>
+        </article>
+
+        <!-- Formwork Carpentry -->
+        <article class="course-card-page reveal reveal-delay-2" data-category="carpentry">
+          <div class="course-card-page__image">
+            <img src="images/course_formwork_carpentry.webp" alt="Formwork Carpentry course at ATTC" loading="lazy">
+            <span class="course-card-page__badge">Carpentry</span>
+          </div>
+          <div class="course-card-page__body">
+            <h2 class="course-card-page__title">Formwork Carpentry</h2>
+            <p class="course-card-page__desc">Specialize in constructing and assembling formwork systems critical to concrete casting. Learn timber, metal, and modular formwork techniques for slabs, beams, columns, and walls.</p>
+            <div class="course-card-page__tags">
+              <span class="course-tag"><i class="fa-solid fa-clock"></i>Practical Training</span>
+              <span class="course-tag"><i class="fa-solid fa-shield-halved"></i>ATTC Certified</span>
+            </div>
+          </div>
+          <div class="course-card-page__footer"><a href="courses/formwork-carpentry.html">View Full Details &rarr;</a></div>
+        </article>
+
+        <!-- Bar Bending -->
+        <article class="course-card-page reveal" data-category="structural">
+          <div class="course-card-page__image">
+            <img src="images/course_bar_bending.webp" alt="Bar Bending course at ATTC" loading="lazy">
+            <span class="course-card-page__badge">Structural</span>
+          </div>
+          <div class="course-card-page__body">
+            <h2 class="course-card-page__title">Bar Bending</h2>
+            <p class="course-card-page__desc">Master the essential skills of steel rebar cutting, bending, and tying for reinforced concrete construction. A vital trade for foundations, beams, columns, and large-scale building projects.</p>
+            <div class="course-card-page__tags">
+              <span class="course-tag"><i class="fa-solid fa-clock"></i>Practical Training</span>
+              <span class="course-tag"><i class="fa-solid fa-shield-halved"></i>ATTC Certified</span>
+            </div>
+          </div>
+          <div class="course-card-page__footer"><a href="courses/bar-bending.html">View Full Details &rarr;</a></div>
+        </article>
+
+        <!-- Bricklayer -->
+        <article class="course-card-page reveal reveal-delay-1" data-category="masonry">
+          <div class="course-card-page__image">
+            <img src="images/course_bricklayer.webp" alt="Bricklayer course at ATTC" loading="lazy">
+            <span class="course-card-page__badge">Masonry</span>
+          </div>
+          <div class="course-card-page__body">
+            <h2 class="course-card-page__title">Bricklayer</h2>
+            <p class="course-card-page__desc">Develop expert bricklaying and masonry skills for walls, arches, corners, and decorative patterns. One of the oldest and most vital construction trades — now taught with modern precision.</p>
+            <div class="course-card-page__tags">
+              <span class="course-tag"><i class="fa-solid fa-clock"></i>Practical Training</span>
+              <span class="course-tag"><i class="fa-solid fa-shield-halved"></i>ATTC Certified</span>
+            </div>
+          </div>
+          <div class="course-card-page__footer"><a href="courses/bricklayer.html">View Full Details &rarr;</a></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <div id="cta-placeholder"></div>
+</main>
+
+<script src="components.js"></script>
+<script src="script.js"></script>
+<script>
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const courseCards = document.querySelectorAll('.course-card-page');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      courseCards.forEach(card => {
+        if (filter === 'all' || card.dataset.category === filter) {
+          card.style.display = '';
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(16px)';
+          requestAnimationFrame(() => {
+            card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          });
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>

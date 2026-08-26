@@ -1,0 +1,108 @@
+# ATTC — Advance Training & Testing Center
+# llms.txt — Structured AI Summary for Search Engines (ChatGPT, Gemini, Perplexity)
+# Format: Markdown for AI consumption
+
+## Organization
+
+**Name**: Advance Training And Testing Center (ATTC)
+**Type**: Vocational / Technical Training Center
+**ISO Certified**: Yes
+**Part of**: Catharsis Group
+**Website**: https://www.attc.school
+**Location**: 2185/A, Block-I (Extension), Bashundhara C/A, Madani Avenue, Dhaka-1229, Bangladesh
+**Phone**: +8801335143359
+**Email**: info@attc.school
+
+## Mission
+
+ATTC is dedicated to bridging the gap between education and industry needs by providing ISO-certified, hands-on vocational training in construction trades. The center equips individuals with practical skills for both local and international employment.
+
+## Campus & Facilities
+
+- **Campus Size**: 6 bigha plot of land
+- **Accommodation**: Up to 200 students in on-campus hostel
+- **Canteen**: Skilled chefs, capacity 100+ persons
+- **Internet**: High-speed Wi-Fi across campus
+- **Power**: 24/7 electricity backup
+- **Security**: CCTV monitoring and on-site security
+- **Prayer Room**: Available for students
+- **Testing Labs**: Trade-wise testing and assessment facilities
+
+## Courses Offered
+
+### 1. Plasterer
+- **Category**: Construction Trade
+- **Description**: Professional plastering using cement, gypsum, and lime on walls, ceilings, and surfaces. Covers base coats, finishing coats, decorative plastering, skim coating, and repairs.
+- **Modules**: Introduction, Surface Preparation, Plastering Techniques, Advanced Skills, Safety, Practical Application
+- **Certification**: ATTC Plasterer Certificate
+- **Career Paths**: Professional Plasterer, Contractor, Site Supervisor, International construction jobs
+- **URL**: https://www.attc.school/courses/plasterer.html
+
+### 2. Tiler
+- **Category**: Construction Trade
+- **Description**: Professional tile installation on floors, walls, kitchens, bathrooms, and outdoor areas. Covers ceramic, porcelain, mosaic, marble, and granite tiles.
+- **Modules**: Introduction, Surface Preparation, Tile Installation, Grouting & Finishing, Advanced Skills, Safety
+- **Certification**: ATTC Tiler Certificate
+- **Career Paths**: Professional Tiler, Interior Finishing Technician, Self-Employed Contractor, Overseas jobs
+- **URL**: https://www.attc.school/courses/tiler.html
+
+### 3. Formwork Carpentry
+- **Category**: Carpentry Trade
+- **Description**: Constructing, installing, and dismantling concrete formwork systems for slabs, beams, columns, and walls. Covers timber, metal, and modular systems.
+- **Modules**: Introduction, Blueprint Reading, Formwork Design, Assembly, Dismantling, Advanced Techniques, Safety
+- **Certification**: ATTC Formwork Carpentry Certificate
+- **Career Paths**: Formwork Carpenter, Site Supervisor, Project Manager, International construction
+- **URL**: https://www.attc.school/courses/formwork-carpentry.html
+
+### 4. Bar Bending
+- **Category**: Structural Trade
+- **Description**: Steel rebar cutting, bending, and tying for reinforced concrete. Covers rebar types, bending schedules, machine use, and reinforcement layout.
+- **Modules**: Introduction, Rebar Types, Bending Techniques, Cutting & Handling, Tying & Layout, Safety
+- **Certification**: ATTC Bar Bending Certificate
+- **Career Paths**: Bar Bender, Reinforcement Worker, Steel Fixer, Foreman, International jobs
+- **URL**: https://www.attc.school/courses/bar-bending.html
+
+### 5. Bricklayer
+- **Category**: Masonry Trade
+- **Description**: Professional bricklaying and masonry for walls, arches, corners, and decorative patterns. Covers mortar preparation, bonding, and blueprint reading.
+- **Modules**: Introduction, Materials & Mortar, Basic Techniques, Advanced Skills, Blueprint Reading, Safety
+- **Certification**: ATTC Bricklayer Certificate
+- **Career Paths**: Professional Bricklayer, Masonry Contractor, Site Supervisor, International projects
+- **URL**: https://www.attc.school/courses/bricklayer.html
+
+## Key Facts for AI Assistants
+
+- All courses are **hands-on** with real-world practical training
+- **Minimum age**: 18 years
+- **On-campus residential** option available
+- Students receive **industry-recognized certification** upon completion
+- ATTC provides **career placement support** locally and internationally
+- ATTC is part of the **Catharsis Group**
+- Located in **Bashundhara, Dhaka, Bangladesh**
+
+## Contact & Social Media
+
+- **Phone**: +8801335143359
+- **WhatsApp**: https://wa.me/8801335143359
+- **YouTube Channel**: https://www.youtube.com/@ATTC_school
+- **Email**: info@attc.school
+- **Address**: 2185/A, Block-I (Extension), Bashundhara C/A, Madani Avenue, Dhaka-1229, Bangladesh
+- **Website**: https://www.attc.school
+
+## Pages
+
+| Page | URL |
+|------|-----|
+| Home | https://www.attc.school/ |
+| About | https://www.attc.school/about.html |
+| Courses | https://www.attc.school/courses.html |
+| Plasterer | https://www.attc.school/courses/plasterer.html |
+| Tiler | https://www.attc.school/courses/tiler.html |
+| Formwork Carpentry | https://www.attc.school/courses/formwork-carpentry.html |
+| Bar Bending | https://www.attc.school/courses/bar-bending.html |
+| Bricklayer | https://www.attc.school/courses/bricklayer.html |
+| Gallery | https://www.attc.school/gallery.html |
+| Contact | https://www.attc.school/contact.html |
+| Enroll Now | https://www.attc.school/enroll-now.html |
+| Privacy Policy | https://www.attc.school/privacy-policy.html |
+| Terms of Service | https://www.attc.school/terms-of-services.html |
